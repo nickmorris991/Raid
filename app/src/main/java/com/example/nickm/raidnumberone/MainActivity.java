@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intentLoadNewActivity = new Intent(MainActivity.this, NewActivity.class);
                 startActivity(intentLoadNewActivity);
             }
-    }   }};
+        });
+    }
 
 }
