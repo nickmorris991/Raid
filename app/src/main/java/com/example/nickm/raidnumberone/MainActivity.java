@@ -6,34 +6,22 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.content.Intent;
 import android.view.View;
-import android.widget.Button;
-import android.util.Log;
-import android.widget.Toast;
-
 
 public class MainActivity extends AppCompatActivity {
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
+    ImageButton doctorImageButton;
 
-            /**
-             * Get the button
-             */
-            Button docRegButton = (Button) findViewById(R.id.docRegButton);
-            /**
-             * use submit button
-             */
-            docRegButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                        Toast.makeText(getApplicationContext(), "Submit successful. Application being reviewed.", Toast.LENGTH_LONG)
-                                .show();
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        doctorImageButton = (ImageButton) findViewById(R.id.imageButton4);
+        doctorImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentLoadNewActivity = new Intent(MainActivity.this, NewActivity.class);
+                startActivity(intentLoadNewActivity);
+            }
+    }   }};
 
-                }
-            });
-
-        }
-    }
-
+}
